@@ -19,6 +19,7 @@
     --font-family: OpenSans;
     --font-h1-size: 45px;
     --font-h2-size: 30px;
+    --font-p-size: 24px;
     --font-weight-regular: 400;
     --font-weight-bold: 700;
 }
@@ -30,7 +31,8 @@ body{
 }
 
 .logo{
-    font-size: 24px
+    font-size: 24px;
+    cursor: pointer;
 }
 .logo span{
     font-size: var(--font-h1-size);
@@ -66,10 +68,12 @@ header nav ul li:hover{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 500px;
 }
 
 .profileImg{
     width: 45%;
+    margin: auto;
 }
 
 .myName{
@@ -93,6 +97,7 @@ header nav ul li:hover{
 
 .resumeDownload span button{
     margin-left:1rem ;
+    cursor: pointer;
 }
 .resumeDownload span button{
     border: none;
@@ -104,4 +109,113 @@ header nav ul li:hover{
 .resumeDownload span button:hover{
     background-color: var(--button-hover-color);
     color: var(--button-hover-text-color);
+}
+
+.homeAboutMe{
+    border: 1px solid black; /*create the border little blur and add shadow on the border*/
+    padding: 2rem;
+}
+
+.homeAboutMe h1{
+    font-size: var(--font-h1-size);
+}
+
+.homeAboutMe p{
+    font-size: var(--font-p-size);
+}
+
+.homeProject{
+    /* margin-top: 2rem; */
+}
+
+.homeProject h1{
+    font-size: var(--font-h1-size);
+}
+
+.projectSection{
+    display: flex;
+    justify-content: space-between;
+}
+
+.projectCard{
+    width: 30%;
+    border: 1px solid black;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.projectCard img{
+    width: 100%;
+    object-fit: cover;
+}
+
+/* footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 4rem;
+    padding: 2rem;
+    height: 200px;
+    background-color: var(--footer-background-color);
+    color: var(--secondary-text-color);
+}
+
+.socialMeidaIcon{
+    display: flex;
+    gap: 1rem;
+}
+
+.socialMeidaIcon i{
+    cursor: pointer;
+    font-size: 2rem;
+} */
+
+footer {
+    background-color: #f8f8f8; /* Light gray background for the footer */
+    padding: 40px 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #333;
+    border-top: 1px solid #ddd;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-logo {
+    flex: 1;
+}
+
+.footer-about, .footer-contact, .footer-social {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-social .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    font-size: 1.5rem;
+}
+
+.footer-social .social-icons a {
+    text-decoration: none;
+}
+
+.footer-social .social-icons a:hover {
+    transform: scale(1.2);
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 12px;
+    color: #777;
+}
+
+.footer-bottom p {
+    margin: 0;
 }
