@@ -72,7 +72,7 @@ header div nav ul {
 header div nav ul li {
     list-style-type: none;
     cursor: pointer;
-    /* padding: 0.75rem; */
+    padding: 0.75rem;
     z-index: -1;
     font-size: var(--font-menu-size);
 }
@@ -173,7 +173,6 @@ main{
 
 .homeProject {
     margin-top: 8rem;
-    margin-bottom: 8rem;
     background-color: var(--page-color);
     padding: 4rem 2rem;
     box-shadow: 0 8px 5px rgba(0, 0, 0, 0.1), 
@@ -187,18 +186,7 @@ main{
 .projectSection {
     display: flex;
     justify-content: space-between;
-}
-
-.projectCard {
-    width: 30%;
-    border: 1px solid black;
-    padding: 1rem;
-    cursor: pointer;
-}
-
-.projectCard img {
-    width: 100%;
-    object-fit: cover;
+    gap: 1rem;
 }
 
 footer {
@@ -206,7 +194,8 @@ footer {
     /* Light gray background for the footer */
     padding: 2rem 0;
     color: white;
-    margin: auto;
+    /* margin: 5rem auto; */
+    margin-top: 8rem;
 }
 
 .footer-content {
@@ -214,24 +203,21 @@ footer {
     display: flex; /* Enable grid layout */
     justify-content: space-between;
     margin: 0 auto; 
-  }
-
-  .footer-about{
-    text-align: left;
-  }
-.footer-about,
-.footer-contact,
-.footer-social {
-    /* text-align: center; */
-    /* width: 20%; */
 }
-
+.footer-social h3{
+    font-size: var(--font-h3-size);
+    text-align: center;
+    margin-bottom: 1rem;
+}
 .footer-social .social-icons {
     display: flex;
     justify-content: center;
     gap: 15px;
 }
 
+.footer-social a i {
+    font-size: 2rem;
+}
 .footer-social .social-icons a {
     text-decoration: none;
 }
@@ -283,6 +269,9 @@ main{
 }
 
 /* Project PAge */
+main h2{
+    font-size: var(--font-h2-size);
+}
 .projects{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -328,4 +317,106 @@ main{
     .projects{
         grid-template-columns: 1fr;
     } 
+}
+
+.contact-top h2{
+    font-size: var(--font-h2-size);
+}
+
+.contact-top p{
+    font-size: var(--font-p-size);
+    text-align: center;
+}
+
+.email,.address{
+    background-color: var(--page-color);
+    width: 20%;
+    text-align: center;
+    padding: 2rem 1rem;
+    border-bottom: 3px solid black ;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.email:hover,.address:hover{
+    transform: scale(1.1);
+    border-color: red;
+}
+.email i, .address i{
+    font-size: 2rem;
+}
+
+.email h3 , .address h3{
+    font-size: var(--font-h3-size);
+    margin: 1rem;
+}
+
+.email a{
+    color: var(--primary-color);
+}
+
+.contact-address{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 8rem;
+}
+
+.contact-message{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 8rem;
+}
+
+.touch{
+    /* background-color: var(--page-color); */
+    /* text-align: center; */
+    /* padding-bottom: 3rem; */
+}
+.touch h3{
+    font-size: var(--font-h3-size);
+}
+
+.touch p{
+    font-size: var(--font-p-size);
+    /* width: 55%;
+    margin: auto; */
+}
+
+.form{
+    /* background-color: var(--page-color); */
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+    gap: 1rem;
+}
+
+.form input{
+    width: 500px;
+    height: 30px;
+    font-size: var(--font-p-size);
+    padding: 10px;
+    border: 2px solid #ccc;
+}
+
+.form textarea{
+    width: 500px;
+    font-size: var(--font-p-size);
+    padding: 10px;
+    border: 2px solid #ccc;
+}
+
+.form button{
+    width: 200px;
+    height: 50px;
+    border: none;
+    background-color: var(--button-color);
+    color: var(--button-text-color);
+    cursor: pointer;
+    transition: 0.3s ease, transform 0.3s ease;
+    align-self: flex-end;
+    font-size: var(--font-p-size);
+}
+
+.form button:hover{
+    background-color: var(--button-hover-color);
 }
